@@ -1,23 +1,14 @@
 # TRINIT_Team-Rockerzz_ML
 
-## AgroVision - Crop Recommendation Engine
+## AgroVision: The Crop Recommendation Engine
 
 ### Introduction
 
-This app is designed to help farmers make informed decisions about what crops to grow based on their:
-+ NITROGEN_CONTENT
-+ PHOSPHOROUS_CONTENT
-+ POTASSIUM_CONTENT
-+ TEMPERATURE
-+ HUMIDITY
-+ PH_SOIL
-+ RAINFALL
-
-By using this app, farmers can avoid overspending on fertilizers and prevent the depletion of their soil resources by rotating crops properly.
+AgroVision is a crop recommendation engine designed to help farmers make informed decisions about what crops to grow based on their geolocation, season, soil composition, and target return on investment. By taking into account factors such as nitrogen content, phosphorous content, potassium content, temperature, humidity, pH of soil, and rainfall, AgroVision provides personalized crop recommendations to farmers. By using this app, farmers can avoid overspending on fertilizers, prevent soil depletion, and maximize their returns.
 
 ### Features
 
-+ Predicts the optimal crop to grow based on soil composition, rainfall, temperature, humidity and soil PH.
++ Predicts the optimal crop to grow based on geolocation, season, nitrogen content, phosphorous content, potassium content, temperature, humidity, pH of soil, and rainfall.
 + Provides a user-friendly interface for farmers to interact with the machine learning model.
 + Ranks a variety of crops that could be cultivated in a particular location according to sales price.
 + Factors in the different types of soil found in various parts of India and its general nutritional composition.
@@ -27,4 +18,8 @@ By using this app, farmers can avoid overspending on fertilizers and prevent the
 - Clone the repository to your local machine.
 - Install the required packages using **pip install -r requirements.txt**.
 - Run the app using **python app.py**.
-- Enter the geolocation, season, and target return on investment to receive your crop recommendations.
+- Enter the geolocation, season, nitrogen content, phosphorous content, potassium content, temperature, humidity, pH of soil, and rainfall to receive your crop recommendations.
+
+### Contributing
+
+Author: Gaurav Singh, Harsh Rai, Arshdeep
