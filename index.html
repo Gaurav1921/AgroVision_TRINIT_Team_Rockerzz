@@ -1,61 +1,39 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Crop Recommendation Website</title>
-  
-  
-  <!-- Linking to the CSS file -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-
 <body>
-  <div class="container">
-    <h1 class="title">Crop Recommendation</h1>
-    
-    <!-- Main Input Form for Crop Recommendation -->
-    <form action="{{ url_for('predict')}}" method="post">
-      <div class="input-group">
-        <label for="nitrogen-content">Nitrogen Content</label>
-        <input type="text" id="nitrogen-content" name="NITROGEN_CONTENT" placeholder="NITROGEN_CONTENT" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="phosphorous-content">Phosphorous Content</label>
-        <input type="text" id="phosphorous-content" name="PHOSPHOROUS_CONTENT" placeholder="PHOSPHOROUS_CONTENT" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="potassium-content">Potassium Content</label>
-        <input type="text" id="potassium-content" name="POTASSIUM_CONTENT" placeholder="POTASSIUM_CONTENT" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="temperature">Temperature</label>
-        <input type="text" id="temperature" name="TEMPERATURE" placeholder="TEMPERATURE" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="humidity">Humidity</label>
-        <input type="text" id="humidity" name="HUMIDITY" placeholder="HUMIDITY" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="ph-soil">PH Soil</label>
-        <input type="text" id="ph-soil" name="PH_SOIL" placeholder="PH_SOIL" required="required">
-      </div>
-      
-      <div class="input-group">
-        <label for="rainfall">Rainfall</label>
-        <input type="text" id="rainfall" name="RAINFALL" placeholder="RAINFALL" required="required">
-      </div>
-      
-      <button type="submit" class="btn btn-primary">Predict</button>
-    </form>
-    
-    <br>
-    <br>
-    {{ prediction_text }}
-  </div>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email ID" required>
+            <input type="text" id="phone" placeholder="Phone number" required>
+            <textarea  id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "username",
+                Password : "password",
+                To : 'them@website.com',
+                From : "you@isp.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
 </html>
