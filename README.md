@@ -5,11 +5,12 @@
 ### Introduction
 
 This app is designed to help farmers make informed decisions about what crops to grow based on their:
-1. Soil Content: NITROGEN_CONTENT, PHOSPHOROUS_CONTENT, POTASSIUM_CONTENT
-2. TEMPERATURE
-3. HUMIDITY
-4. PH_SOIL
-5. RAINFALL.
++ Soil Content: NITROGEN_CONTENT, PHOSPHOROUS_CONTENT, POTASSIUM_CONTENT
++ TEMPERATURE
++ HUMIDITY
++ PH_SOIL
++ RAINFALL
+
 By using this app, farmers can avoid overspending on fertilizers and prevent the depletion of their soil resources by rotating crops properly.
 
 ### Features
