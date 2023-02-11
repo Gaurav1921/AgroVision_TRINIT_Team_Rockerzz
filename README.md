@@ -5,7 +5,9 @@
 ### Introduction
 
 This app is designed to help farmers make informed decisions about what crops to grow based on their:
-+ Soil Content: NITROGEN_CONTENT, PHOSPHOROUS_CONTENT, POTASSIUM_CONTENT
++ NITROGEN_CONTENT
++ PHOSPHOROUS_CONTENT
++ POTASSIUM_CONTENT
 + TEMPERATURE
 + HUMIDITY
 + PH_SOIL
@@ -15,7 +17,7 @@ By using this app, farmers can avoid overspending on fertilizers and prevent the
 
 ### Features
 
-+ Predicts the optimal crop to grow based on soil composition, rainfall, temperature, and humidity, soil's PH.
++ Predicts the optimal crop to grow based on soil composition, rainfall, temperature, humidity and soil PH.
 + Provides a user-friendly interface for farmers to interact with the machine learning model.
 + Ranks a variety of crops that could be cultivated in a particular location according to sales price.
 + Factors in the different types of soil found in various parts of India and its general nutritional composition.
