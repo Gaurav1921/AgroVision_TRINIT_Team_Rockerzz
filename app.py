@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request
 import pickle
+from sklearn.preprocessing import StandardScaler
+sc =  StandardScaler()
 
 app = Flask(__name__)
 
 # Load the pickle file
-model = pickle.load(open("Trinitt.pkl", "rb"))
+model = pickle.load(open("Rockerz.pkl", "rb"))
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -22,7 +25,7 @@ def predict():
     rainfall = request.form["RAINFALL"]
     
     # Use the model to predict the crop recommendation
-    prediction = model.predict([[nitrogen_content, phosphorous_content, potassium_content, temperature, humidity, ph_soil, rainfall]])
+    prediction = model.predict(sc.fit_transform([[nitrogen_content, phosphorous_content, potassium_content, temperature, humidity, ph_soil, rainfall]]))
     prediction_text = "The recommended crop is: " + prediction
     
     return render_template("index.html", prediction_text=prediction_text)
